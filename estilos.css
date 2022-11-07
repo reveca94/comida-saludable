@@ -2,19 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Open Sans'
+    
 }
-.portada{
-    width:100%;
-    height: 600px;
-    background: #e4efef; 
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(78, 56%, 85%, 0.453), hsla(184, 46%, 88%, 0.47)), url(img/quinoa2.jpg);
-     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(78, 56%, 85%, 0.495), hsla(186, 38%, 84%, 0.385)), url(img/quinoa2.jpg);
-     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+body{
+font-family:'nunito',
 
 }
+.contenedor{
+padding: 60px 0;
+width: 90%;
+max-width: 1000px;
+margin: auto;
+overflow: hidden;
+}
+
+.titulo{
+    color: rgb(14, 45, 118);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+/* header*/
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #A1FFCE; 
+     /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(67, 100%, 91%, 0.432), #a1ffce89), url(img/quinoa.jpg); 
+     /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(67, 100%, 91%, 0.478), #a1ffce90), url(img/quinoa.jpg); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+header .textos-header h1{
+    font-size: 50px;
+    color: #050505;
+
+}
+
+.wave{
+   position: absolute;
+   bottom: 0; 
+   width: 100%;
+}
+/*abaut us*/
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.imagen-abaut-us{
+    width: 48%;
+
+}
+.sobre-nosotros .contenido-ingredientes{
+    width: 48%;
+
+}
+.contenido-ingredientes h3{
+    margin-bottom: 15px;
+
+}
+.contenido-ingredientes h3 span{
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 5px;
+
+   
+
+}
+
+
