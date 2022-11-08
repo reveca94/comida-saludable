@@ -65,11 +65,9 @@ header .textos-header h1{
 }
 .imagen-abaut-us{
     width: 48%;
-
 }
 .sobre-nosotros .contenido-ingredientes{
     width: 48%;
-
 }
 .contenido-ingredientes h3{
     margin-bottom: 15px;
@@ -79,12 +77,29 @@ header .textos-header h1{
     text-align: center;
     display: inline-block;
     width: 30px;
-    height: 30px;
+    height: 5px;
     padding: 2px;
-    margin-right: 5px;
-
-   
+    margin-right: 2px;
 
 }
+.contenido-ingredientes p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+    
+}
+ .contenido-preparacion h3 span{
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    padding: 0px;
+    margin-right: 2px;
+ }
+ .contenido-preparacion p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+ }
 
 
