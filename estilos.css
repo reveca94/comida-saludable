@@ -30,9 +30,9 @@ header{
     height: 600px;
     background: #A1FFCE; 
      /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(67, 100%, 91%, 0.432), #a1ffce89), url(img/quinoa.jpg); 
+    background: -webkit-linear-gradient(to right, hsla(69, 33%, 96%, 0.034), #dcf1e64d), url(img/quinoa.jpg); 
      /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(67, 100%, 91%, 0.478), #a1ffce90), url(img/quinoa.jpg); 
+    background: linear-gradient(to right, hsla(67, 60%, 97%, 0.022), #e2f4eb4a), url(img/quinoa.jpg); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
