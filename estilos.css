@@ -1,13 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
-body{
-font-family:'nunito',
 
-}
 .contenedor{
 padding: 60px 0;
 width: 90%;
@@ -16,23 +16,16 @@ margin: auto;
 overflow: hidden;
 }
 
-.titulo{
-    color: rgb(14, 45, 118);
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
 
-}
 /* header*/
 
 header{
     width: 100%;
     height: 600px;
-    background: #A1FFCE; 
-     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(69, 33%, 96%, 0.034), #dcf1e64d), url(img/quinoa.jpg); 
+     background: #232526;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, hsla(210, 3%, 26%, 0.568), hsla(200, 4%, 14%, 0.525)), url(img/quinoaaaa.jpg);
      /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(67, 60%, 97%, 0.022), #e2f4eb4a), url(img/quinoa.jpg); 
+     background: linear-gradient(to right, hsla(210, 3%, 26%, 0.584), hsla(200, 4%, 14%, 0.545)), url(img/quinoaaaa.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -47,8 +40,8 @@ header .textos-header{
 
 }
 header .textos-header h1{
-    font-size: 50px;
-    color: #050505;
+    font-size: 70px;
+    color: #ffffff;
 
 }
 
@@ -73,28 +66,20 @@ header .textos-header h1{
     margin-bottom: 15px;
 
 }
-.contenido-ingredientes h3 span{
-    text-align: center;
-    display: inline-block;
-    width: 30px;
-    height: 5px;
-    padding: 2px;
-    margin-right: 2px;
+h2, h4{
+    margin: 20px;
 
 }
-.contenido-ingredientes p{
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;
-    
+
+.contenido-ingredientes li{
+    font-weight: 500;
+    line-height: 20px;
 }
- .contenido-preparacion h3 span{
+ .contenido-preparacion h2{
     text-align: center;
     display: inline-block;
-    width: 30px;
-    height: 50px;
-    padding: 0px;
-    margin-right: 2px;
+    padding: 30px;
+    margin: 10px;
  }
  .contenido-preparacion p{
     padding: 0px 0px 30px 15px;
