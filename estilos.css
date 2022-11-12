@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
+#area{
+    resize: none;
+    margin:30px ;
+ }
+
 *{
     margin: 0;
     padding: 0;
@@ -87,4 +92,11 @@ h2, h4{
     text-align: justify;
  }
 
-
+ #calificacion{
+   display: flex;
+}
+#calificacion > img{
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
