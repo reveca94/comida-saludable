@@ -59,7 +59,7 @@ header .textos-header h1{
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     transition: all 0.25s;
 }
@@ -138,11 +138,57 @@ h2, h4{
     text-align: justify;
  }
 
-#calificacion{
-   display: flex;
-}
+
 #calificacion > img{
     margin: 10px;
     width: 20px;
     height: 20px;
 }
+
+.form-floating{
+    margin-left: 200px;
+}
+#area{
+    margin: 10px;
+}
+ @media screen and (max-width: 900px){
+    header{
+        background-position: center;
+    }
+    header .textos-header h1{
+        font-size: 50px;
+    }
+    .container{
+        height: 44%;
+    }
+    #contenedor-icon{
+        align-items: center;
+    }
+    .contenido-ingredientes{
+        align-items: center;
+    }
+    .contenido-preparacion{
+        align-items: center;
+    }
+    .form-floating{
+       margin: 0%;
+    }
+ }
+ @media screen and (max-width:350px){
+    
+    header .textos-header h1{
+    font-size:40px; 
+    }
+
+    .container .card{
+        height: 50px;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+    .container .card:hover{
+        height: 230px;
+    }
+
+    }
+
+ 
