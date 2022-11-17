@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-
 #area{
     resize: none;
     margin:30px ;
@@ -9,7 +7,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
 }
 
 /* header*/
@@ -35,8 +33,9 @@ header .textos-header{
 
 }
 header .textos-header h1{
-    font-size: 70px;
+    font-size: 100px;
     color: #ffffff;
+    
 
 }
 
@@ -54,8 +53,8 @@ header .textos-header h1{
     justify-content: center;
 }
 .container .card{
-    width: 150px;
-    height: 230px;
+    width: 160px;
+    height: 265px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
