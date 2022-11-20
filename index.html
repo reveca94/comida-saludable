@@ -7,17 +7,17 @@
     <title>mochikaFOOD</title>
     <link rel="shortcut icon" href="img/logo mochika.png">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js'></script>
+    <script src="pdf.js"></script>
     <!--custom css-->
     <link rel="stylesheet" href="css/interfaz.css"/>
 </head>
 <body>  
     <header>
-    <div class="textos-header">
+    <div class="texto-header">
     <h1>Ensalada de quinoa</h1>
     </div>
             <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -26,83 +26,71 @@
             </div>
      </header>
   <main>
+    
     <div class="container">
+      <div class="card">
+        <img src="img/tiempo.png"/>
+        <h6>tiempo</h6>
+        <p>20 min</p>
+      </div>
        <div class="card">
         <img src="img/calorias.png"/>
         <h6>calorias</h6>
-        <p>Las calorías permiten que el organismo desarrolle funciones
-          como digerir los alimentos y mantener la temperatura corporal. Si comes más
-          de lo que usas, puedes aumentar de peso.
+        <p>70gr.
         </p>
-      </div>
-      <div class="card">
-        <img src="img/fibra.png"/>
-        <h6>fibras</h6>
-        <p>la fibra previene enfermedades como la diabetes, el estreñimiento y el colesterol alto. la fibra es un
-           alimento que encontramos en los vegetales, frutas y cereales integrales.</p>
       </div>
       <div class="card">
         <img src="img/proteina.png"/>
         <h6>proteinas</h6>
-        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-           graphic or web designs.</p>
+        <p>50</p>
       </div>
       <div class="card">
-        <img src="img/libre-de-grasas-trans.png"/>
+        <img src="img/grasas.png"/>
         <h6>grasas saturadas</h6>
-        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-           graphic or web designs.</p>
+        <p>50</p>
       </div>
       <div class="card">
         <img src="img/azucar.png"/>
         <h6>azucares</h6>
-        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-           graphic or web designs.</p>
+        <p>50</p>
       </div>
       <div class="card">
         <img src="img/salero.png"/>
         <h6>sal</h6>
-        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-           graphic or web designs.</p>
+        <p>36</p>
       </div>
     </div>
-  <div id="contenedor-icon">
-        <img id="icon_tiempo" src="img/reloj-de-arena.png" alt="arena"/>
-        <span>10 min</span>
-      </div>
-      <div id="contenedor-persona">
-        <img id="icon_persona" src="img/gente.png" alt="arena"/>
-        <span>4 person</span>
-      </div>
-    <section class="contenedor sobre-nosotros">
-      <div class="contenedor-sobre-nosotros" alt="">
+    <div id="body_pdf">
+    <section class="contenedor">
+      <div class="contenedor-recetas" alt="">
         <div class="contenido-ingredientes">
-          <h2>ingredientes</h2>
-        <ul>
-          <li>200 gr de quinoa</li>
-          <li>1 cucharadita de sal</li>
-          <li>30 gr de aceite de oliva</li>
-          <li>800 gr de agua</li>
-          <li>Hierbas aromáticas:</li>
-          <li>25 gr de perejil (sólo las hojas) limpias y secas</li>
-          <li>15 gr de menta fresca (sólo las hojas) limpias y secas</li>
-          <li>1 ramillete de cebollino fresco (limpio y seco)</li>
-          <li>1 cucharadita de zumo de limón</li>
+        <div id="pdf"><h2>ingredientes</h2><img id="descarga" src="img/expediente.png"/></div>
+       <ul>
+          <li><span class="negrita">200 gr</span>de quinoa</li>
+          <li><span class="negrita">1</span> cucharadita de sal</li>
+          <li><span class="negrita">30 gr</span> de aceite de oliva</li>
+          <li><span class="negrita">800 gr </span>de agua</li>
+          <li><span class="sub-ingredientes">Hierbas aromáticas:</span></li>
+          <li><span class="negrita">25 gr</span>de perejil (sólo las hojas) limpias y secas</li>
+          <li><span class="negrita">15 gr</span>de menta fresca (sólo las hojas) limpias y secas</li>
+          <li><span class="negrita">1</span> ramillete de cebollino fresco (limpio y seco)</li>
+          <li><span class="negrita">1</span> cucharadita de zumo de limón</li>
         </ul>
           <H4>Vinagreta:</H4>
         <ul>
-          <li>80-100 gr de zumo de limón (al gusto)</li>
-          <li>50 gr de aceite de oliva</li>
-          <li>½pimiento rojo</li>
-          <li>½ pimiento verde</li>
+          <li><span class="negrita">80-100 gr</span> de zumo de limón (al gusto)</li>
+          <li><span class="negrita">50 gr</span>de aceite de oliva</li>
+          <li><span class="negrita">½</span>pimiento rojo</li>
+          <li><span class="negrita">½</span> pimiento verde</li>
           <li>parte verde de dos cebolletas (opcional)</li>
-          <li>*100 gr de aceitunas negras sin hueso</li>
-          <li>½cucharadita de comino molido</li>
-          <li>½ cucharadita de pimienta</li>
-          <li>1 cucharada de sal</li>
-          <li> 2 tomates maduros cortados en dados</li>
-          <li>1 pepino cortado en dados</li>
+          <li><span class="negrita">100 gr</span> de aceitunas negras sin hueso</li>
+          <li><span class="negrita">½</span> cucharadita de comino molido</li>
+          <li><span class="negrita">½</span> cucharadita de pimienta</li>
+          <li><span class="negrita">1 </span> cucharada de sal</li>
+          <li><span class="negrita">2</span> tomates maduros cortados en dados</li>
+          <li><span class="negrita">1</span> pepino cortado en dados</li>
         </ul>
+        
       </div>
     </div>
         <div class="contenido-preparacion">
@@ -117,6 +105,7 @@
               ¡Qué la disfrutes!!!</p>
         </div>
     </section>
+    </div>
   </main>
   <div class="form-floating col-sm-10 col-md-8 col-lg-6">
     <label for="floatingTextarea">Calificar</label>
@@ -127,11 +116,10 @@
       <img class="icons" src="img/estrella1.png">
       <img class="icons" src="img/estrella1.png">
     </div>
-    <textarea id="area"class="form-control" placeholder="comente aqui" id="floatingTextarea"></textarea>
+    <textarea id="comentarios"class="form-control" placeholder="comente aqui" id="floatingTextarea"></textarea>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button class="btn btn-primary me-md-2" type="button">enviar</button>
     </div>
   </div>
- 
 </body>
 </html>

@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);
-#area{
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700');
+#comentarios{
     resize: none;
     margin:30px ;
  }
@@ -24,7 +25,7 @@ header{
     background-attachment: fixed;
     position: relative;
 }
-header .textos-header{
+header .texto-header{
     display: flex;
     height: 430px;
     width: 100%;
@@ -32,9 +33,10 @@ header .textos-header{
     justify-content: center;
 
 }
-header .textos-header h1{
+header .texto-header h1{
     font-size: 100px;
     color: #ffffff;
+    font-family: 'Righteous', cursive;
     
 
 }
@@ -43,18 +45,20 @@ header .textos-header h1{
    position: absolute;
    bottom: 0; 
    width: 100%;
+
 }
+
 .container{
     width:100%;
     max-width: 1200px;
-    height: 280px;
+    height: 170px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .container .card{
-    width: 160px;
-    height: 265px;
+    width: 100px;
+    height: 150px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -69,61 +73,62 @@ header .textos-header h1{
 .container .card img{
     width: 50px;
     height: 50px;
-    margin-left: 50px;
+    margin-left: 25px;
+    margin-top: 20px;
 }
 .container .card h6{
     font-weight: 600;
 }
 .container .card p{
     padding: 0 1rem;
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: bolder;
 }
-
-#contenedor-icon{
-    width: 100%;
-    margin-left: 27%;
-}
-#icon_tiempo{
-    width: 20px;
-    height: 20px;  
-}
-#contenedor-persona{
-    width: 100%;
-    margin-left: 27%;
-}
-#icon_persona{
-    width: 20px;
-    height: 20px;
-}
-/*abaut us*/
-.contenedor{
-    padding: 30px 0;
+/* contenedor recetas*/
+.contenedor {
+    padding: 20px 0;
     width: 90%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    
     }
-.contenedor-sobre-nosotros{
+.contenedor-recetas{
     display: flex;
     justify-content: space-evenly;
-
+    
+    
 }
-.sobre-nosotros .contenido-ingredientes{
+.contenedor-recetas .contenido-ingredientes{
     width: 48%;
+    margin-bottom:15px ;
+    margin-top: 18px;
 }
-.contenido-ingredientes h3{
-    margin-bottom: 15px;
-
+#pdf{
+    display: flex;
+    align-items: center;
+     
+}
+#pdf img{
+    width: 30px;
+    height: 30px;
 }
 h2, h4{
-    margin: 20px;
+    margin: 10px;
 
 }
 
 .contenido-ingredientes li{
     font-weight: 500;
     line-height: 20px;
+    list-style: none;
+    padding: 0;
+}
+.negrita{
+    font-weight: bold;
+}
+.sub-ingredientes{
+    font-weight: bold;
 }
  .contenido-preparacion h2{
     text-align: center;
@@ -136,7 +141,7 @@ h2, h4{
     font-weight: 300;
     text-align: justify;
  }
-
+/* calificacion */
 
 #calificacion > img{
     margin: 10px;
@@ -147,24 +152,29 @@ h2, h4{
 .form-floating{
     margin-left: 200px;
 }
-#area{
+#comentarios{
     margin: 10px;
 }
  @media screen and (max-width: 900px){
     header{
         background-position: center;
+        height: 50%;
     }
-    header .textos-header h1{
+    header .texto-header h1{
         font-size: 50px;
+        text-align: center;
     }
-    .container{
-        height: 44%;
+
+    .container .card{
+        height: 140px;
+        width: 80px;
     }
     #contenedor-icon{
         align-items: center;
     }
     .contenido-ingredientes{
         align-items: center;
+        width: 100%;
     }
     .contenido-preparacion{
         align-items: center;
@@ -173,19 +183,30 @@ h2, h4{
        margin: 0%;
     }
  }
- @media screen and (max-width:350px){
-    
-    header .textos-header h1{
-    font-size:40px; 
-    }
+ @media screen and (max-width:550px){
+    .contenedor-recetas .contenido-ingredientes{
+       align-items: center;
+       width: 65%;
+       margin-top: 135px;
+      
+ }
+ }
+ @media screen and (max-width:300px){
+    header .texto-header h1{
+       text-align: center;
+      }
 
+    .contenedor-recetas .contenido-ingredientes{
+        width: 100%;
+        margin-top: 270px;
+    }
     .container .card{
-        height: 50px;
+        height: 140px;
         overflow: hidden;
         transition: 0.4s;
     }
     .container .card:hover{
-        height: 230px;
+        height: 140px;
     }
 
     }
