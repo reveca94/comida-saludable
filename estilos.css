@@ -11,6 +11,13 @@
     padding: 0;
     font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
 }
+.body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+
+}
 
 /* header*/
 
@@ -156,12 +163,15 @@ h2, h4{
 #comentarios{
     margin: 10px;
 }
-/* referencia de recetas */
+/* tarjetas de recetas */
 .frame{
 position: relative;
 width: 300px;
 height: 400px;
-margin-left: 20%;
+margin-left: 10%;
+margin-top: 5%;
+float: left;
+
 }
 .frame .frame-landing{
     position: relative;
@@ -171,6 +181,8 @@ margin-left: 20%;
     background: linear-gradient(transparent 80%, #000), var(--i);
     background-size:cover;
     background-position: center;
+    z-index: 100; 
+    
 }
 .frame .frame-landing h6{
     position: absolute;
@@ -241,6 +253,112 @@ margin-left: 20%;
     background: #f26c43;
  }
 
+ .frame2{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 22%;
+    margin-top: 5%;
+    float: left;
+    
+    }
+    .frame2 .frame-landing{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 5px 10px #000;
+        background: linear-gradient(transparent 80%, #000), var(--i);
+        background-size:cover;
+        background-position: center;
+        z-index: 100; 
+        
+    }
+    .frame2 .frame-landing h6{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 25px;
+        color: #ffffff;
+    }
+    .frame2 .frame-info{
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        padding: 15px;
+        background: #ffffff;
+        z-index: 90;
+        box-shadow: 0 5px 10px #000;
+        transition: .5s;
+    }
+    .frame2:hover .frame-info{
+        left:100%
+    }
+    .frame-info .head{
+        padding: 5px 0;
+        border-bottom: solid 1px #d5f243;
+    }
+    .frame-info .head .tittle{
+        font-size: 20px;
+        font-weight: 700;
+        color: #111110;
+    }
+    .frame-info .head .description{
+        display: flex;
+        gap: 10px;
+    }
+    .frame-info .head .description .item{
+        display: flex;
+        gap: 5px; 
+    }
+    
+    .frame-info .head .description .item i{
+       color: rgb(243, 41, 41);
+       font-size: 17px;
+    }
+    .frame-info .head .description .item p{
+        font-size: 13px;
+     }
+     .frame-info .content{
+        margin-top: 8px;
+    }
+     .frame-info .content .list{
+        padding: 7px 15px;
+     }
+     .frame-info .content .list li{
+        font-size: 15px;
+        margin-bottom: 0px;
+        
+     }
+     .frame-info .action .btn{
+        padding: 10px;
+        color: #000;
+        width: 100%;
+        text-align: center;
+        background: #f26c43;
+     }
+ @media screen and (max-width: 1280px){
+.frame{
+    position: relative;
+    width: 270px;
+    height: 400px;
+    margin-left:0%;
+    margin-top: 5%;
+    float: left;
+}
+.frame2{
+    position: relative;
+    width: 270px;
+    height: 400px;
+    margin-left:23%;
+    margin-top: 5%;
+    float: left;
+}
+}
 
  @media screen and (max-width: 900px){
     header{
@@ -269,7 +387,7 @@ margin-left: 20%;
     .form-floating{
        margin: 0%;
     }
- }
+  
  @media screen and (max-width:550px){
     .contenedor-recetas .contenido-ingredientes{
        align-items: center;
