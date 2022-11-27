@@ -1,136 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Source Sans Pro;
-    }
-    
-    /*************************************************************
-  HEADER
-**************************************************************/
-header {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    transform-style: inherit;
-    z-index: -1;
+
+@import "https://unpkg.com/open-props/open-props.min.css";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	font-family:  'Google Sans', sans-serif, system-ui;
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--text-1);
+}
+
+:where(h1, h2) {
+	margin: 0;
+}
+
+main, footer, header {
+/* 	width: 40rem; */
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+section {
+	width: 40rem;
+	max-width: 100%;
+	margin: 0 auto;
+	display: grid;
+	gap: var(--size-4);
+}
+
+section p {
+	padding: 0 var(--size-6);
+}
+
+main {
+	background: var(--surface-2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--size-4);
+	margin-bottom: var(--size-10);
+	max-width: 100vw;
+  padding: var(--size-4) 0;
+/* 	overflow: hidden; */
+}
+
+
+
+footer h2 {
+	font-weight: var(--font-weight-9);
+	text-align: center;
+}
+
+:where(header, footer) {
+	padding: var(--size-12) var(--size-6);
+	display: grid;
+	place-items: center;
+}
+
+h1 {
+	font-size: var(--font-size-fluid-3);
+}
+
+.photo-block {
+  position: sticky;
+  top: calc(50% - 30vh);
+  height: 60vh;
+	width: 100%;
+	display: grid;
+  overflow: hidden;
+  background: var(--gray-6);
+}
+
+.photo-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(38deg);
+  display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.photo {
+  aspect-ratio: 3 / 4;
+  width: 20vmax;
+}
+
+.collage {
+  height: 70vh;
+  view-timeline: --collage;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo:nth-of-type(7n + 1):nth-of-type(even),
+.photo:nth-of-type(7n + 3):nth-of-type(even),
+.photo:nth-of-type(7n + 5):nth-of-type(even),
+.photo:nth-of-type(7n + 7):nth-of-type(even) {
+  --vertical: -100%;
+  --horizontal: 100%;
+}
+.photo:nth-of-type(7n + 1):nth-of-type(odd),
+.photo:nth-of-type(7n + 3):nth-of-type(odd),
+.photo:nth-of-type(7n + 5):nth-of-type(odd),
+.photo:nth-of-type(7n + 7):nth-of-type(odd) {
+  --vertical: -100%;
+  --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(even),
+.photo:nth-of-type(7n + 4):nth-of-type(even),
+.photo:nth-of-type(7n + 6):nth-of-type(even) {
+  --vertical: 100%;
+  --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(odd),
+.photo:nth-of-type(7n + 4):nth-of-type(odd),
+.photo:nth-of-type(7n + 6):nth-of-type(odd) {
+  --vertical: 100%;
+  --horizontal: 100%;
+}
+
+.photo {
+  animation-name: travel;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: --collage;
+  animation-delay: enter 100%;
+  animation-end-delay: exit 0%;
+}
+
+@keyframes travel {
+  0% {
+    translate: 0 0;
   }
-  
-  header::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: block;
-    background: url(https://picsum.photos/g/1921/1081?random) top center;
-    background-size: cover;
-    transform: translateZ(-1px) scale(2.1);
-    min-height: 100%;
-    z-index: -2;
+  50% {
+    translate: 0 var(--vertical);
   }
-  
-  
-  /*************************************************************
-    SECTIONS
-  **************************************************************/
-  section {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-    transform-style: inherit;
+  100% {
+    translate: var(--horizontal) var(--vertical);
   }
-  
-  .section1 {
-    background: #fafafa;
-    box-shadow: 0 0 20px #333;
-    z-index: 1;
+}
+
+@keyframes indicate {
+  to {
+    transform: scaleX(1);
   }
-  
-  .section2::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: block;
-    background: url(https://picsum.photos/g/1920/1080?random) top center;
-    background-size: cover;
-    transform: translateZ(-.5px) scale(1.6);
-    z-index: -1;
-  }
-  
-  /*************************************************************
-    HEADINGS
-  **************************************************************/
-  h1 {
-    font-size: 4rem;
-    text-align: center;
-    position: absolute;
-    padding: 1rem;
-    background: #fafafa;
-    box-shadow: 0 0 20px #333;
-    top: 50%;
-    left: 50%;
-    transform: translateZ(-1px) scale(2) translate(-25%, -25%);
-  }
-  
-  .section1 h1 {
-    z-index: 3;
-    transform: translate(-50%, -50%);
-    box-shadow: none;
-  }
-  
-  .section2 h1 {
-    transform: translateZ(-.3px) scale(1.3) translate(-39%, -39%);
-    z-index: 3;
-  }
-  
-  /*************************************************************
-    BASIC STYLES
-  **************************************************************/
-  *,
-  *::before,
-  *::after,
-  :root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
-  
-  html {
-    overflow: hidden;
-    height: 100%;
-  }
-  
-  body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 100%;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    font-size: 62.5%;
-    font-family: 'Overlock', Arial, Helvetica, sans-serif;
-  }
-  
-  .author {
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    padding: .5rem 1rem;
-    background: #fafafa;
-    border-bottom-left-radius: 5px;
-    transition: 300ms;
-  }
-  
-  .author a,
-  .author a:visited {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    transition: 300ms;
-  }
-  
-  .author:hover,
-  .author:active {
-    box-shadow: 0 0 10px #33333350;
-  }
+}
+/* End debugging timelines */
