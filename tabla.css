@@ -58,7 +58,7 @@
  }
  
  .container th {
-       background-color: #72a088;
+       background-color: #58c2f3;
  }
  
  .container td:first-child { color: #292cc0; }
@@ -71,7 +71,7 @@
  }
  
  .container td:hover {
-   background-color: #e642ff;
+   background-color: #efc1f6;
    color: #741a62;
    font-weight: bold;
    
