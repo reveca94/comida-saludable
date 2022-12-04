@@ -21,7 +21,7 @@ min-height: 100vh;
 
 /* header*/
 
-header{
+#efecto-onda{
     width: 100%;
     height: 600px;
      background: #232526;  /* fallback for old browsers */
@@ -33,7 +33,7 @@ header{
     background-attachment: fixed;
     position: relative;
 }
-header .texto-header{
+#efecto-onda .texto-header{
     display: flex;
     height: 430px;
     width: 100%;
@@ -41,10 +41,12 @@ header .texto-header{
     justify-content: center;
 
 }
-header .texto-header h1{
+#efecto-onda  h1{
     font-size: 100px;
     color: #ffffff;
     font-family: 'Righteous', cursive;
+    text-align: center;
+    padding: 50px;
     
 
 }

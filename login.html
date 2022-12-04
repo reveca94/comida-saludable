@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo mochika.png">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+    
+
+</head>
+    <body>
+        <header class="topo" id="topo">
+          <input type="checkbox" id="control-nav" />
+          <label for="control-nav" class="control-nav"></label>
+          <label for="control-nav" class="control-nav-close"></label>
+            <nav class="alinhaRight">
+            <ul class="list-auto">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">contacto</a></li>
+              <li><a href="#">productos</a></li>
+              <li><a href="index.html">recetas</a></li>
+              <li><a href="#">favoritos</a></li>
+              <li><a href="login.html">
+            <div class="toggle-wrapper">
+                <div class="toggle pancake-stack">
+                <input id="pancake" onclick="deslizar()" type="checkbox"/>
+                <label class="toggle-item" for="pancake">
+                  <div class="pancakes">
+                    <div class="pancake"></div>
+                    <div class="pancake"></div>
+                    <div class="pancake"></div>
+                    <div class="butter"></div>
+                  </div>
+                </label>
+              </div>
+              <div class="name">login</div>
+          </div>
+          </a></li>
+          </ul>
+          </nav>
+        </header>
+      <section id="zhenia">
+        <div class="imgBx">
+          <img src="https://images.pexels.com/photos/5677315/pexels-photo-5677315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mandarinafondo"/>
+        </div>
+        <div class="contentBx">
+          <div class="formBx">
+            <h2>Login</h2>
+            <form action="#" method="get">
+              <div class="inputBx">
+                <span>Email</span>
+                <input type="text" name="">
+              </div>
+    
+              <div class="inputBx">
+                <span>Password</span>
+                <input type="password" name="">
+              </div>
+    
+              <div class="remember">
+                <label><input type="checkbox" name="">Remember user</label>
+              </div>
+    
+              <div class="inputBx">
+                <input type="submit" value="Iniciar Sesion" name="">
+              </div>
+    
+              <div class="inputBx">
+                <p>
+                  Don't have an account? <a href="#">Register</a></p>
+              </div>
+    
+            </form>
+          </div>
+        </div>
+      </section>
+<script src="./login.js"></script>
+</body>
+</html>
